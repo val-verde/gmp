@@ -2304,7 +2304,7 @@ foo$gmp_cv_asm_label_suffix
 	$gmp_cv_asm_byte	0],
         [gmp_tmp_val=[`$NM conftest.$OBJEXT | grep foo | \
           sed -e 's;[[][0-9][]]\(.*\);\1;' -e 's;[^1-9]*\([0-9]*\).*;\1;'`]
-        if test "$gmp_tmp_val" = 4; then
+        if test "$gmp_tmp_val" -ge 4; then
           gmp_cv_asm_w32="$gmp_tmp_op"
           break
         fi])
